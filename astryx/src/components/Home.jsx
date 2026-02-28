@@ -47,6 +47,22 @@ function Home() {
         
         <Link to="/behind-the-scenes" className="btn-view-more">View All Behind The Scenes</Link>
       </div>
+
+      {/* Our Work Preview Section */}
+      <div className="work-preview-section">
+        <h2>Our Work</h2>
+        <p className="section-subtitle">Get an exclusive look at our Latest Films</p>
+
+        <div className="work-preview-grid">
+          <div className="work-preview-card">
+            <video src="/newfilm1.mp4" controls></video>
+            <div className="work-preview-info">
+              <h3>The Broken Promise</h3>
+              <p>The Broken Promise is a heartfelt drama about love, regret, and second chances.</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
