@@ -5,7 +5,7 @@ body {
   color: #161616;
   background: linear-gradient(135deg, #111111 0%, #aaa8a0c0 100%);
   font-family: "Euclid Circular B", "Poppins";
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 * {
