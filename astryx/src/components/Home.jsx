@@ -48,10 +48,10 @@ function Home() {
         <Link to="/behind-the-scenes" className="btn-view-more">View All Behind The Scenes</Link>
       </div>
 
-      {/* Our WorK Preview Section */}
-      <div className="work-container">
+      {/* Our Work Preview Section */}
+      <div className="work-preview-section">
         <h2>Our Work</h2>
-        <p className="section-subtitle">Get an exclusive look at our latest creations</p>
+        <p className="section-subtitle">Get an exclusive look at our Latest Films</p>
 
         <div className="work-preview-grid">
           <div className="work-preview-card">
@@ -62,17 +62,7 @@ function Home() {
             </div>
           </div>
         </div>
-        <div className="work-preview-card">
-            <video src="/newfilm1.mp4" controls></video>
-            <div className="work-preview-info">
-              <h3>The Summer That Turned Grey</h3>
-              <p>The Summer That Turned Grey is a coming-of-age drama about a teenage girl who returns to her family’s seaside cottage for one final summer—only to find that childhood traditions, first love, and lifelong friendships are quietly slipping away. As storms roll in and tensions rise, she’s forced to face the bittersweet truth that growing up means letting go of what once felt golden.</p>
-          </div>
-          
-          <Link to="/Our-Work" className="work-view-more">View All Films</Link>
-          </div>
       </div>
-
     </div>
   );
 }

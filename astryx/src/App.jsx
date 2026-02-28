@@ -8,6 +8,7 @@ import OurWork from "./components/OurWork"
 //styles
 import "./styles/Home.css"
 import "./styles/BehindTheScenes.css";
+import "./styles/OurWork.css"
 
 function App() {
   return (
