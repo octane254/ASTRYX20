@@ -54,6 +54,35 @@ function Home() {
           </div>
         </div>
       </div>
+      {/* Contact Us */}
+      <div className="contact-preview-section">
+        <h2>Let's Create Together</h2>
+        <p className="section-subtitle">Have a story to tell? We'd love to hear from you</p>
+
+        <div className="contact-preview-content">
+          <div className="contact-preview-cards">
+            <div className="contact-preview-card">
+              <div className="contact-preview-icon">📧</div>
+              <h3>Email Us</h3>
+              <p><a href="mailto:hello@astryx.com">hello@astryx.com</a></p>
+            </div>
+
+            <div className="contact-preview-card">
+              <div className="contact-preview-icon">📞</div>
+              <h3>Call Us</h3>
+              <p><a href="tel:+254123456789">+254 123 456 789</a></p>
+            </div>
+
+            <div className="contact-preview-card">
+              <div className="contact-preview-icon">📍</div>
+              <h3>Visit Us</h3>
+              <p>123 Film Street<br />Nairobi, Kenya</p>
+            </div>
+          </div>
+
+          <Link to="/contact-us" className="btn-contact-full">Get In Touch</Link>
+        </div>
+      </div>
     </div>
   );
 }
