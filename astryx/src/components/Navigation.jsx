@@ -10,6 +10,7 @@ function Navigation() {
           <li><NavLink to="/" end>Home</NavLink></li>
           <li><NavLink to="/behind-the-scenes">Behind The Scenes</NavLink></li>
           <li><NavLink to="/our-work">Our Work</NavLink></li>
+          <li><NavLink to="/contact-us">Contact Us</NavLink></li>
         </ul>
       </nav>
     </>
