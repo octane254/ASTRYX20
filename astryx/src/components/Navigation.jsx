@@ -1,7 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
-
 function Navigation() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -17,47 +16,22 @@ function Navigation() {
   // Detect scroll
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      setIsScrolled(window.scrollY > 50);
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Close menu when clicking outside
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      const nav = document.querySelector('.nav-bar');
-      const hamburger = document.querySelector('.hamburger');
-      
-      if (isMenuOpen && nav && hamburger && 
-          !nav.contains(event.target) && 
-          !hamburger.contains(event.target)) {
-        setIsMenuOpen(false);
-      }
-    };
-
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, [isMenuOpen]);
-
   // Prevent body scroll when menu is open
   useEffect(() => {
-    if (isMenuOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'unset';
-    }
+    document.body.style.overflow = isMenuOpen ? 'hidden' : 'unset';
   }, [isMenuOpen]);
 
   return (
     <>
       <img 
-        src="/Copilot_20260222_091225.png" 
+        src="/Copilot_20260302_075653.png" 
         alt="Astryx Logo" 
         className={`site-logo ${isScrolled ? 'scrolled' : ''}`}
       />
@@ -72,6 +46,9 @@ function Navigation() {
         <span></span>
         <span></span>
       </div>
+
+      {/* Overlay (click to close) */}
+      {isMenuOpen && <div className="overlay" onClick={closeMenu}></div>}
 
       {/* Navigation */}
       <nav className={`nav-bar ${isMenuOpen ? 'active' : ''} ${isScrolled ? 'scrolled' : ''}`}>
