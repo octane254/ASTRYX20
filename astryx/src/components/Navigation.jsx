@@ -48,7 +48,8 @@ function Navigation() {
       </div>
 
       {/* Overlay (click to close) */}
-      {isMenuOpen && <div className="overlay" onClick={closeMenu}></div>}
+      {isMenuOpen && <div className={`overlay ${isMenuOpen ? 'active' : ''}`} onClick={closeMenu}></div>}
+
 
       {/* Navigation */}
       <nav className={`nav-bar ${isMenuOpen ? 'active' : ''} ${isScrolled ? 'scrolled' : ''}`}>
