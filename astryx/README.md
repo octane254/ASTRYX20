@@ -2,7 +2,7 @@
 
 A stunning, cinematic website for Astryx - a film production company dedicated to creating authentic, powerful narratives that resonate across cultures and generations.
 
-![Astryx Banner](https://via.placeholder.com/1200x400/0a0a0a/d4af37?text=Astryx+Film+Production)
+![Astryx Banner](astryx/public/Copilot_20260222_091225.png)
 
 ## 🎬 About
 
