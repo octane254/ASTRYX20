@@ -153,30 +153,14 @@
 }
 
 /* Navigation Bar */
-.nav-bar {
-  position: fixed;
-  top: 0;
-  right: -100%;
-  width: 280px;
-  height: 100vh;
-  background: rgba(10, 10, 10, 0.98);
-  backdrop-filter: blur(20px);
-  border-left: 1px solid rgba(212, 175, 55, 0.2);
-  transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  padding: 100px 0 40px;
-  overflow-y: auto;
+.nav-bar
+ {
   z-index: 1001; 
 }
 
-.nav-bar.active {
-  right: 0;
-}
-
-/* Hamburger */
 .hamburger {
   z-index: 1002; 
 }
-
 
 /* Responsive Design */
 @media (max-width: 1024px) {
