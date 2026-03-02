@@ -98,7 +98,7 @@
   position: fixed;
   top: 35px;
   right: 20px;
-  z-index: 1002; /* highest so it’s always clickable */
+  z-index: 1002; 
   flex-direction: column;
   gap: 6px;
   cursor: pointer;
@@ -132,7 +132,7 @@
   transform: rotate(-45deg) translate(7px, -7px);
 }
 
-/* Overlay */
+
 /* Overlay */
 .overlay {
   position: fixed;
@@ -141,24 +141,40 @@
   width: 100vw;
   height: 100vh;
   background: rgba(0,0,0,0.5);
-  z-index: 1000; /* above page */
+  z-index: 1000;
   opacity: 0;
-  pointer-events: none; /* prevent clicks when inactive */
+  pointer-events: none; 
   transition: opacity 0.3s ease;
 }
 
 .overlay.active {
   opacity: 1;
-  pointer-events: auto; /* allow clicks when active */
+  pointer-events: auto; 
 }
 
 /* Navigation Bar */
 .nav-bar {
-  z-index: 1001; /* sits above overlay */
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 280px;
+  height: 100vh;
+  background: rgba(10, 10, 10, 0.98);
+  backdrop-filter: blur(20px);
+  border-left: 1px solid rgba(212, 175, 55, 0.2);
+  transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 100px 0 40px;
+  overflow-y: auto;
+  z-index: 1001; 
 }
 
+.nav-bar.active {
+  right: 0;
+}
+
+/* Hamburger */
 .hamburger {
-  z-index: 1002; /* always clickable */
+  z-index: 1002; 
 }
 
 

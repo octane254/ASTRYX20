@@ -47,19 +47,21 @@ function Navigation() {
         <span></span>
       </div>
 
-      {/* Overlay (click to close) */}
-      {isMenuOpen && <div className={`overlay ${isMenuOpen ? 'active' : ''}`} onClick={closeMenu}></div>}
+     
+      {isMenuOpen && (
+        <div className={`overlay ${isMenuOpen ? 'active' : ''}`} onClick={closeMenu}></div>
+      )}
+
+  <nav className={`nav-bar ${isMenuOpen ? 'active' : ''} ${isScrolled ? 'scrolled' : ''}`}>
+    <ul>
+      <li><NavLink to="/" end onClick={closeMenu}>Home</NavLink></li>
+      <li><NavLink to="/behind-the-scenes" onClick={closeMenu}>Behind The Scenes</NavLink></li>
+      <li><NavLink to="/our-work" onClick={closeMenu}>Our Work</NavLink></li>
+      <li><NavLink to="/contact-us" onClick={closeMenu}>Contact Us</NavLink></li>
+    </ul>
+  </nav>
 
 
-      {/* Navigation */}
-      <nav className={`nav-bar ${isMenuOpen ? 'active' : ''} ${isScrolled ? 'scrolled' : ''}`}>
-        <ul>
-          <li><NavLink to="/" end onClick={closeMenu}>Home</NavLink></li>
-          <li><NavLink to="/behind-the-scenes" onClick={closeMenu}>Behind The Scenes</NavLink></li>
-          <li><NavLink to="/our-work" onClick={closeMenu}>Our Work</NavLink></li>
-          <li><NavLink to="/contact-us" onClick={closeMenu}>Contact Us</NavLink></li>
-        </ul>
-      </nav>
     </>
   );
 }
