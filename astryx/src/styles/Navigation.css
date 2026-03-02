@@ -28,7 +28,7 @@
   right: 0;
   left: 0;
   padding: 40px 50px;
-  z-index: 999;
+  z-index: 1001; /* higher than overlay */
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -98,7 +98,7 @@
   position: fixed;
   top: 35px;
   right: 20px;
-  z-index: 1001;
+  z-index: 1002; /* highest so it’s always clickable */
   flex-direction: column;
   gap: 6px;
   cursor: pointer;
@@ -132,6 +132,7 @@
   transform: rotate(-45deg) translate(7px, -7px);
 }
 
+/* Overlay */
 .overlay {
   position: fixed;
   top: 0;
@@ -139,7 +140,13 @@
   width: 100vw;
   height: 100vh;
   background: rgba(0,0,0,0.5);
-  z-index: 998; /* below nav-bar (999) and hamburger (1001) */
+  z-index: 999; /* above page, below nav-bar */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.overlay.active {
+  opacity: 1;
 }
 
 /* Responsive Design */
@@ -202,6 +209,7 @@
     transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     padding: 100px 0 40px;
     overflow-y: auto;
+    z-index: 1001;
   }
 
   .nav-bar.active {
@@ -270,5 +278,3 @@
     padding: 18px 0;
   }
 }
-
-
